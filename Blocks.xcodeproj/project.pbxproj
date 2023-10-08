@@ -13,6 +13,8 @@
 		FB27B65C2AD0D17900F90C2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB27B65B2AD0D17900F90C2B /* Preview Assets.xcassets */; };
 		FB27B65E2AD0D17900F90C2B /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27B65D2AD0D17900F90C2B /* Persistence.swift */; };
 		FB27B6612AD0D17900F90C2B /* Blocks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FB27B65F2AD0D17900F90C2B /* Blocks.xcdatamodeld */; };
+		FB4E82182AD356CA002EAF42 /* BlocksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E82172AD356CA002EAF42 /* BlocksView.swift */; };
+		FB4E821A2AD3579C002EAF42 /* BlocksViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E82192AD3579C002EAF42 /* BlocksViewRepresentable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		FB27B65B2AD0D17900F90C2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB27B65D2AD0D17900F90C2B /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		FB27B6602AD0D17900F90C2B /* Blocks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blocks.xcdatamodel; sourceTree = "<group>"; };
+		FB4E82172AD356CA002EAF42 /* BlocksView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksView.swift; sourceTree = "<group>"; };
+		FB4E82192AD3579C002EAF42 /* BlocksViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksViewRepresentable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 				FB27B65D2AD0D17900F90C2B /* Persistence.swift */,
 				FB27B65F2AD0D17900F90C2B /* Blocks.xcdatamodeld */,
 				FB27B65A2AD0D17900F90C2B /* Preview Content */,
+				FB4E82172AD356CA002EAF42 /* BlocksView.swift */,
+				FB4E82192AD3579C002EAF42 /* BlocksViewRepresentable.swift */,
 			);
 			path = Blocks;
 			sourceTree = "<group>";
@@ -146,6 +152,8 @@
 				FB27B65E2AD0D17900F90C2B /* Persistence.swift in Sources */,
 				FB27B6612AD0D17900F90C2B /* Blocks.xcdatamodeld in Sources */,
 				FB27B6572AD0D17800F90C2B /* ContentView.swift in Sources */,
+				FB4E821A2AD3579C002EAF42 /* BlocksViewRepresentable.swift in Sources */,
+				FB4E82182AD356CA002EAF42 /* BlocksView.swift in Sources */,
 				FB27B6552AD0D17800F90C2B /* BlocksApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +291,7 @@
 				DEVELOPMENT_TEAM = Y7F52ZVSDT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = " Camera needed for augmented reality";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -312,6 +321,7 @@
 				DEVELOPMENT_TEAM = Y7F52ZVSDT;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = " Camera needed for augmented reality";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

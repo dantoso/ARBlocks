@@ -1,10 +1,3 @@
-//
-//  BlocksApp.swift
-//  Blocks
-//
-//  Created by Matheus Dantas on 06/10/23.
-//
-
 import SwiftUI
 
 @main
@@ -13,8 +6,8 @@ struct BlocksApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .environment(\.managedObjectContext, persistenceController.container.viewContext)
+			BlocksViewRepresentable()
+				.ignoresSafeArea()
         }
     }
 }

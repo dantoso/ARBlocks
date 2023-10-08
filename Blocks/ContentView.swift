@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Blocks
-//
-//  Created by Matheus Dantas on 06/10/23.
-//
-
 import SwiftUI
 import CoreData
 
