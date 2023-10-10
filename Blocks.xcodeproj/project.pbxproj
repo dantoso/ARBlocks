@@ -61,8 +61,8 @@
 			children = (
 				FB27B6542AD0D17800F90C2B /* BlocksApp.swift */,
 				FB27B6582AD0D17900F90C2B /* Assets.xcassets */,
-				FBF44B322AD582250081BCA8 /* Database */,
 				FBF44B312AD582070081BCA8 /* View */,
+				FBF44B322AD582250081BCA8 /* Database */,
 				FB27B65A2AD0D17900F90C2B /* Preview Content */,
 			);
 			path = Blocks;
