@@ -6,7 +6,7 @@ struct BlocksApp: App {
 
     var body: some Scene {
         WindowGroup {
-			BlocksViewRepresentable()
+			GameView()
 				.ignoresSafeArea()
         }
     }

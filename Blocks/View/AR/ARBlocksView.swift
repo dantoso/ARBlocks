@@ -1,7 +1,7 @@
 import ARKit
 import RealityKit
 
-final class BlocksView: ARView {
+final class ARBlocksView: ARView {
 	required init(frame frameRect: CGRect) {
 		super.init(frame: frameRect)
 	}
