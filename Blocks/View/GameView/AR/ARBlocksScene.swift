@@ -7,14 +7,19 @@ final class ARBlocksScene: ARSCNView {
 	}
 	
 	override func didMoveToSuperview() {
-		let box = SCNBox(width: 0.3, height: 0.3, length: 0.3, chamferRadius: 0)
+//		createBox(at: SCNVector3(x: 0, y: 0, z: -0.3))
+	}
+
+	func createBox(at position: SCNVector3) {
+		let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
 		box.firstMaterial?.diffuse.contents = UIColor.systemPink
 
 		let node = SCNNode(geometry: box)
 		node.castsShadow = true
 		self.scene.rootNode.addChildNode(node)
-		node.position = SCNVector3(x: 0, y: 0, z: -1)
+		node.position = position
 	}
+	
 	@MainActor required dynamic init?(coder decoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}

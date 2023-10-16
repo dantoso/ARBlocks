@@ -4,14 +4,38 @@ import ARKit
 final class GameViewController: UIViewController {
 	lazy var sceneView = ARBlocksScene()
 
+	var anchors: Set<ARAnchor> = []
+
 	init() {
 		super.init(nibName: nil, bundle: nil)
 	}
 
 	override func viewDidLoad() {
+		super.viewDidLoad()
+		
+		sceneView.delegate = self
+		sceneView.autoenablesDefaultLighting = false
+		sceneView.scene = SCNScene()
+
 		view.addSubview(sceneView)
 		setupConstraints()
+	}
+
+	override func viewWillAppear(_ animated: Bool) {
+		super.viewWillAppear(animated)
+
 		addARConfiguration()
+	}
+
+	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+		guard let touch = touches.first else { return }
+		let location = touch.location(in: sceneView)
+
+		let hitResults = sceneView.hitTest(location)
+		if let hit = hitResults.last {
+			let position = hit.worldCoordinates
+			sceneView.createBox(at: position)
+		}
 	}
 
 	func setupConstraints() {
@@ -28,7 +52,7 @@ final class GameViewController: UIViewController {
 
 		sceneView.session.run(config)
 
-		sceneView.debugOptions = [.showBoundingBoxes, .showWireframe, .showFeaturePoints]
+		sceneView.debugOptions = [.showWorldOrigin, .showWireframe, .showFeaturePoints]
 	}
 
 	required init?(coder: NSCoder) {

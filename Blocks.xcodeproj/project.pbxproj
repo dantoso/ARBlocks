@@ -17,6 +17,7 @@
 		FBA6AF382AD4E4830052E517 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA6AF372AD4E4830052E517 /* GameViewController.swift */; };
 		FBB093A92ADB31CD006F7B9E /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB093A82ADB31CD006F7B9E /* HUDView.swift */; };
 		FBB093AB2ADB32BD006F7B9E /* BlockTextureOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB093AA2ADB32BD006F7B9E /* BlockTextureOption.swift */; };
+		FBD6F1F72ADD968900F189EF /* Game+ARSCNOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6F1F62ADD968900F189EF /* Game+ARSCNOps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		FBA6AF372AD4E4830052E517 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		FBB093A82ADB31CD006F7B9E /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
 		FBB093AA2ADB32BD006F7B9E /* BlockTextureOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockTextureOption.swift; sourceTree = "<group>"; };
+		FBD6F1F62ADD968900F189EF /* Game+ARSCNOps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Game+ARSCNOps.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				FB4E82172AD356CA002EAF42 /* ARBlocksScene.swift */,
 				FBA6AF372AD4E4830052E517 /* GameViewController.swift */,
+				FBD6F1F62ADD968900F189EF /* Game+ARSCNOps.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBD6F1F72ADD968900F189EF /* Game+ARSCNOps.swift in Sources */,
 				FBB093A92ADB31CD006F7B9E /* HUDView.swift in Sources */,
 				FBA6AF382AD4E4830052E517 /* GameViewController.swift in Sources */,
 				FB27B65E2AD0D17900F90C2B /* Persistence.swift in Sources */,
