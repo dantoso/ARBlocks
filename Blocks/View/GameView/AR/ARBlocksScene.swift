@@ -15,7 +15,8 @@ final class ARBlocksScene: ARSCNView {
 		box.firstMaterial?.diffuse.contents = UIColor.systemPink
 
 		let node = SCNNode(geometry: box)
-		node.castsShadow = true
+		node.name = "myBlock"
+
 		self.scene.rootNode.addChildNode(node)
 		node.position = position
 	}

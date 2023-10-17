@@ -28,13 +28,33 @@ final class GameViewController: UIViewController {
 	}
 
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		guard let touch = touches.first else { return }
+		guard 
+			!anchors.isEmpty,
+			let touch = touches.first
+		else { return }
+
 		let location = touch.location(in: sceneView)
 
-		let hitResults = sceneView.hitTest(location)
-		if let hit = hitResults.last {
-			let position = hit.worldCoordinates
-			sceneView.createBox(at: position)
+		let results = sceneView.hitTest(location, options: [.searchMode: 1])
+		
+		for result in results {
+			switch result.node.name {
+			case "myPlane":
+				let position = result.worldCoordinates
+				sceneView.createBox(at: position)
+				break
+
+			case "myBlock":
+				// TODO: algin block
+				// TODO: recognize node faces to add block to correct face
+				var position = result.node.position
+				position.y += 0.1
+				sceneView.createBox(at: position)
+				break
+
+			default:
+				continue
+			}
 		}
 	}
 

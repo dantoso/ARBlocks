@@ -10,9 +10,9 @@ extension GameViewController: ARSCNViewDelegate {
 		plane.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent (0.5)
 
 		let planeNode = SCNNode(geometry: plane)
-		planeNode.position = SCNVector3(x: planeAnchor.center.x, y:0, z: planeAnchor.center.z)
+		planeNode.position = SCNVector3(x: planeAnchor.center.x, y: 0, z: planeAnchor.center.z)
 		planeNode.transform = SCNMatrix4MakeRotation(-Float.pi / 2, 1, 0, 0)
-		
+		planeNode.name = "myPlane"
 		updateMaterialFor(geometry: plane)
 
 		node.addChildNode(planeNode)
