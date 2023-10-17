@@ -45,7 +45,6 @@ final class GameViewController: UIViewController {
 				break
 
 			case "myBlock":
-				// TODO: algin block
 				// TODO: recognize node faces to add block to correct face
 				var position = result.node.position
 				position.y += 0.1
