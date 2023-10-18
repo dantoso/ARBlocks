@@ -1,12 +1,12 @@
 import SwiftUI
 
 struct HUDView: View {
-	@State var selection: Color = .green
-	let colors = [Color.green, .red, .blue]
+	@Binding var selection: UIColor
+	let colors: [Color] = [.red, .yellow, .green, .blue, .purple]
 
     var body: some View {
 		ZStack {
-			RoundedRectangle(cornerRadius: 25)
+			RoundedRectangle(cornerRadius: 10)
 				.foregroundStyle(.bar)
 
 			ScrollView(.horizontal) {
@@ -22,18 +22,18 @@ struct HUDView: View {
 }
 
 struct ColorSelector: View {
-	@Binding var selection: Color
+	@Binding var selection: UIColor
 	let color: Color
 
 	var body: some View {
 		Button(action: {
-			selection = color
+			selection = UIColor(color)
 		}, label: {
 			Rectangle()
 				.foregroundStyle(color)
 				.padding()
 				.background {
-					if selection == color {
+					if selection == UIColor(color) {
 						RoundedRectangle(cornerRadius: 15)
 							.foregroundStyle(.foreground)
 					} else {
@@ -47,5 +47,5 @@ struct ColorSelector: View {
 }
 
 #Preview {
-    HUDView()
+	HUDView(selection: .constant(.red))
 }

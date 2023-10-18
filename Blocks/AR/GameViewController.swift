@@ -3,10 +3,12 @@ import ARKit
 
 final class GameViewController: UIViewController {
 	lazy var sceneView = ARBlocksScene()
-
 	var anchors: Set<ARAnchor> = []
 
-	init() {
+	let uiPublisher: UIPublisher
+
+	init(uiPublisher: UIPublisher) {
+		self.uiPublisher = uiPublisher
 		super.init(nibName: nil, bundle: nil)
 	}
 
@@ -35,8 +37,12 @@ final class GameViewController: UIViewController {
 
 		let location = touch.location(in: sceneView)
 
+		hitTest(location: location)
+	}
+
+	func hitTest(location: CGPoint) {
 		let results = sceneView.hitTest(location, options: [.searchMode: 1])
-		
+
 		for result in results {
 			switch result.node.name {
 			case "myPlane":
