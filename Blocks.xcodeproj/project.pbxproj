@@ -20,6 +20,7 @@
 		FBD6F1F72ADD968900F189EF /* GameVC+ARSCNOps.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD6F1F62ADD968900F189EF /* GameVC+ARSCNOps.swift */; };
 		FBF25BBA2AE048D20075F8F8 /* AppStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BB92AE048D20075F8F8 /* AppStartView.swift */; };
 		FBF25BBD2AE04BE40075F8F8 /* UIPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BBC2AE04BE40075F8F8 /* UIPublisher.swift */; };
+		FBF25BC22AE0635C0075F8F8 /* BlockCreationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BC12AE0635C0075F8F8 /* BlockCreationOptions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		FBD6F1F62ADD968900F189EF /* GameVC+ARSCNOps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameVC+ARSCNOps.swift"; sourceTree = "<group>"; };
 		FBF25BB92AE048D20075F8F8 /* AppStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartView.swift; sourceTree = "<group>"; };
 		FBF25BBC2AE04BE40075F8F8 /* UIPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPublisher.swift; sourceTree = "<group>"; };
+		FBF25BC12AE0635C0075F8F8 /* BlockCreationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCreationOptions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 				FBA6AF372AD4E4830052E517 /* GameViewController.swift */,
 				FBD6F1F62ADD968900F189EF /* GameVC+ARSCNOps.swift */,
 				FB4E82172AD356CA002EAF42 /* ARBlocksScene.swift */,
+				FBF25BC12AE0635C0075F8F8 /* BlockCreationOptions.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -201,6 +204,7 @@
 				FBB093A92ADB31CD006F7B9E /* HUDView.swift in Sources */,
 				FBA6AF382AD4E4830052E517 /* GameViewController.swift in Sources */,
 				FB27B65E2AD0D17900F90C2B /* Persistence.swift in Sources */,
+				FBF25BC22AE0635C0075F8F8 /* BlockCreationOptions.swift in Sources */,
 				FBB093AB2ADB32BD006F7B9E /* BlockTextureOption.swift in Sources */,
 				FB27B6612AD0D17900F90C2B /* Blocks.xcdatamodeld in Sources */,
 				FB4E821A2AD3579C002EAF42 /* GameView.swift in Sources */,

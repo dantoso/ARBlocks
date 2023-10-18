@@ -6,14 +6,15 @@ final class ARBlocksScene: ARSCNView {
 		super.init(frame: frameRect, options: nil)
 	}
 
-	func createBox(at position: SCNVector3) {
+	func createBox(at position: SCNVector3, options: BlockCreationOptions) {
 		let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
-		box.firstMaterial?.diffuse.contents = UIColor.systemPink
+		box.firstMaterial?.diffuse.contents = options.color
 
 		let node = SCNNode(geometry: box)
 		node.name = "myBlock"
 
 		node.position = position
+
 		self.scene.rootNode.addChildNode(node)
 	}
 	

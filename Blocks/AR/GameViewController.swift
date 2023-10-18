@@ -47,7 +47,9 @@ final class GameViewController: UIViewController {
 			switch result.node.name {
 			case "myPlane":
 				let position = result.worldCoordinates
-				sceneView.createBox(at: position)
+				let options = uiPublisher.generateOptions()
+
+				sceneView.createBox(at: position, options: options)
 				return
 
 			case "myBlock":
@@ -58,7 +60,9 @@ final class GameViewController: UIViewController {
 				position.x += 0.1 * normal.x
 				position.z += 0.1 * normal.z
 
-				sceneView.createBox(at: position)
+				let options = uiPublisher.generateOptions()
+
+				sceneView.createBox(at: position, options: options)
 				return
 
 			default:
