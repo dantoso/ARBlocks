@@ -42,14 +42,18 @@ final class GameViewController: UIViewController {
 			case "myPlane":
 				let position = result.worldCoordinates
 				sceneView.createBox(at: position)
-				break
+				return
 
 			case "myBlock":
-				// TODO: recognize node faces to add block to correct face
+				let normal = result.worldNormal
+
 				var position = result.node.position
-				position.y += 0.1
+				position.y += 0.1 * normal.y
+				position.x += 0.1 * normal.x
+				position.z += 0.1 * normal.z
+
 				sceneView.createBox(at: position)
-				break
+				return
 
 			default:
 				continue

@@ -5,10 +5,6 @@ final class ARBlocksScene: ARSCNView {
 	override init(frame frameRect: CGRect) {
 		super.init(frame: frameRect, options: nil)
 	}
-	
-	override func didMoveToSuperview() {
-//		createBox(at: SCNVector3(x: 0, y: 0, z: -0.3))
-	}
 
 	func createBox(at position: SCNVector3) {
 		let box = SCNBox(width: 0.1, height: 0.1, length: 0.1, chamferRadius: 0)
@@ -17,8 +13,8 @@ final class ARBlocksScene: ARSCNView {
 		let node = SCNNode(geometry: box)
 		node.name = "myBlock"
 
-		self.scene.rootNode.addChildNode(node)
 		node.position = position
+		self.scene.rootNode.addChildNode(node)
 	}
 	
 	@MainActor required dynamic init?(coder decoder: NSCoder) {
