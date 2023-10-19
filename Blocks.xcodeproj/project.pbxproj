@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB0F6D1E2AE15B6400B2D0AF /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6D1D2AE15B6400B2D0AF /* SelectButton.swift */; };
+		FB0F6D222AE15BE100B2D0AF /* GameAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6D212AE15BE100B2D0AF /* GameAction.swift */; };
 		FB27B6552AD0D17800F90C2B /* BlocksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27B6542AD0D17800F90C2B /* BlocksApp.swift */; };
 		FB27B6592AD0D17900F90C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB27B6582AD0D17900F90C2B /* Assets.xcassets */; };
 		FB27B65C2AD0D17900F90C2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB27B65B2AD0D17900F90C2B /* Preview Assets.xcassets */; };
@@ -30,6 +32,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FB0F6D1D2AE15B6400B2D0AF /* SelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectButton.swift; sourceTree = "<group>"; };
+		FB0F6D212AE15BE100B2D0AF /* GameAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAction.swift; sourceTree = "<group>"; };
 		FB27B6512AD0D17800F90C2B /* Blocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB27B6542AD0D17800F90C2B /* BlocksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksApp.swift; sourceTree = "<group>"; };
 		FB27B6582AD0D17900F90C2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -64,6 +68,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FB0F6D202AE15BCC00B2D0AF /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				FB0F6D212AE15BE100B2D0AF /* GameAction.swift */,
+				FBB093AA2ADB32BD006F7B9E /* BlockTextureOption.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		FB27B6482AD0D17800F90C2B = {
 			isa = PBXGroup;
 			children = (
@@ -85,12 +98,12 @@
 			children = (
 				FB27B6542AD0D17800F90C2B /* BlocksApp.swift */,
 				FB27B6582AD0D17900F90C2B /* Assets.xcassets */,
+				FB0F6D202AE15BCC00B2D0AF /* Shared */,
 				FBF25BC52AE08C9E0075F8F8 /* Model */,
 				FBF44B312AD582070081BCA8 /* View */,
 				FBF44B332AD5825D0081BCA8 /* AR */,
 				FBF44B322AD582250081BCA8 /* Database */,
 				FB27B65A2AD0D17900F90C2B /* Preview Content */,
-				FBB093AA2ADB32BD006F7B9E /* BlockTextureOption.swift */,
 			);
 			path = Blocks;
 			sourceTree = "<group>";
@@ -135,6 +148,7 @@
 				FBF25BCB2AE094B10075F8F8 /* ColorSelector.swift */,
 				FBF25BCF2AE095180075F8F8 /* ColorSelectionButton.swift */,
 				FBF25BD62AE0AE900075F8F8 /* DeleteButton.swift */,
+				FB0F6D1D2AE15B6400B2D0AF /* SelectButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -256,9 +270,11 @@
 				FBB093A92ADB31CD006F7B9E /* HUDView.swift in Sources */,
 				FBF25BD22AE0A3630075F8F8 /* GameVC+GameActions.swift in Sources */,
 				FBA6AF382AD4E4830052E517 /* GameViewController.swift in Sources */,
+				FB0F6D222AE15BE100B2D0AF /* GameAction.swift in Sources */,
 				FB27B65E2AD0D17900F90C2B /* Persistence.swift in Sources */,
 				FBF25BC22AE0635C0075F8F8 /* BlockCreationOptions.swift in Sources */,
 				FBB093AB2ADB32BD006F7B9E /* BlockTextureOption.swift in Sources */,
+				FB0F6D1E2AE15B6400B2D0AF /* SelectButton.swift in Sources */,
 				FB27B6612AD0D17900F90C2B /* Blocks.xcdatamodeld in Sources */,
 				FB4E821A2AD3579C002EAF42 /* GameView.swift in Sources */,
 				FB4E82182AD356CA002EAF42 /* ARBlocksScene.swift in Sources */,

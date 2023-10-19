@@ -12,8 +12,14 @@ struct HUDView: View {
 				VStack(alignment: .leading, spacing: 10) {
 					ColorSelector()
 
-					DeleteButton()
-
+					ScrollView(.horizontal, showsIndicators: false) {
+						HStack {
+							SelectButton()
+							DeleteButton()
+						}
+						.padding(.horizontal)
+					}
+					.padding(.bottom)
 				}
 			}
 		}
