@@ -164,11 +164,11 @@
 		FBF25BBB2AE04BAC0075F8F8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FBF25BCD2AE094E50075F8F8 /* HUD */,
 				FB1C101B2AE1A49000D24B3F /* SaveView.swift */,
 				FB7EF4872AE187EA00EAAD4D /* ConstructionList.swift */,
 				FB7EF4852AE186E700EAAD4D /* ShowConstructionsButton.swift */,
 				FB4E82192AD3579C002EAF42 /* GameView.swift */,
-				FBF25BCD2AE094E50075F8F8 /* HUD */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -185,8 +185,8 @@
 		FBF25BCD2AE094E50075F8F8 /* HUD */ = {
 			isa = PBXGroup;
 			children = (
-				FBB093A82ADB31CD006F7B9E /* HUDView.swift */,
 				FBF25BCE2AE094F20075F8F8 /* Components */,
+				FBB093A82ADB31CD006F7B9E /* HUDView.swift */,
 			);
 			path = HUD;
 			sourceTree = "<group>";
@@ -194,8 +194,8 @@
 		FBF25BCE2AE094F20075F8F8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FBF25BCB2AE094B10075F8F8 /* ColorSelector.swift */,
 				FB7EF4802AE1738500EAAD4D /* Buttons */,
+				FBF25BCB2AE094B10075F8F8 /* ColorSelector.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
