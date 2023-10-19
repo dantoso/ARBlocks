@@ -55,7 +55,7 @@ final class GameViewController: UIViewController {
 
 		sceneView.session.run(config)
 
-		sceneView.debugOptions = [.showWorldOrigin, .showWireframe, .showFeaturePoints]
+		sceneView.debugOptions = [.showWireframe, .showFeaturePoints]
 	}
 
 	required init?(coder: NSCoder) {

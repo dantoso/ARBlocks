@@ -4,6 +4,21 @@ final class ConstructionData {
 	private var construction: Set<BlockModel> = []
 	private var initalPosition: SCNVector3 = .init(x: 0, y: 0, z: 0)
 
+	init() { }
+
+	init(construction: CDConstruction) {
+		let blocks = construction.blocks?.map { block in
+			return BlockModel(block: block)
+		}
+
+		self.construction = Set(blocks ?? [])
+		self.initalPosition = .init(
+			x: construction.initialX,
+			y: construction.initialY,
+			z: construction.initialZ
+		)
+	}
+
 	func didSelectBlock(model: BlockModel) {
 		if construction.isEmpty {
 			initalPosition = model.position
@@ -41,8 +56,8 @@ final class ConstructionData {
 		return data
 	}
 
-	func saveCurrentConstruction() {
-		// TODO: implement this later
+	func exportConstruction() -> (blocks: [BlockModel], initialPosition: SCNVector3) {
+		return (Array(construction), initalPosition)
 	}
 
 	func reset() {
