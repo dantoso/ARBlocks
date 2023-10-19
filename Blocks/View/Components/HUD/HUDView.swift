@@ -9,7 +9,7 @@ struct HUDView: View {
 				.foregroundStyle(.bar)
 
 			ScrollView(.vertical, showsIndicators: false) {
-				VStack(spacing: 10) {
+				VStack(alignment: .leading, spacing: 10) {
 					ColorSelector()
 
 					DeleteButton()
