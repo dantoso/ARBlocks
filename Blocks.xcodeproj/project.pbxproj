@@ -21,6 +21,11 @@
 		FBF25BBA2AE048D20075F8F8 /* AppStartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BB92AE048D20075F8F8 /* AppStartView.swift */; };
 		FBF25BBD2AE04BE40075F8F8 /* UIPublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BBC2AE04BE40075F8F8 /* UIPublisher.swift */; };
 		FBF25BC22AE0635C0075F8F8 /* BlockCreationOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BC12AE0635C0075F8F8 /* BlockCreationOptions.swift */; };
+		FBF25BC42AE08C840075F8F8 /* ConstructionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BC32AE08C840075F8F8 /* ConstructionData.swift */; };
+		FBF25BC72AE08CA70075F8F8 /* BlockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BC62AE08CA70075F8F8 /* BlockModel.swift */; };
+		FBF25BCC2AE094B10075F8F8 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BCB2AE094B10075F8F8 /* ColorSelector.swift */; };
+		FBF25BD02AE095180075F8F8 /* ColorSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BCF2AE095180075F8F8 /* ColorSelectionButton.swift */; };
+		FBF25BD22AE0A3630075F8F8 /* GameVC+GameActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BD12AE0A3630075F8F8 /* GameVC+GameActions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +44,11 @@
 		FBF25BB92AE048D20075F8F8 /* AppStartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStartView.swift; sourceTree = "<group>"; };
 		FBF25BBC2AE04BE40075F8F8 /* UIPublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIPublisher.swift; sourceTree = "<group>"; };
 		FBF25BC12AE0635C0075F8F8 /* BlockCreationOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockCreationOptions.swift; sourceTree = "<group>"; };
+		FBF25BC32AE08C840075F8F8 /* ConstructionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructionData.swift; sourceTree = "<group>"; };
+		FBF25BC62AE08CA70075F8F8 /* BlockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockModel.swift; sourceTree = "<group>"; };
+		FBF25BCB2AE094B10075F8F8 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
+		FBF25BCF2AE095180075F8F8 /* ColorSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionButton.swift; sourceTree = "<group>"; };
+		FBF25BD12AE0A3630075F8F8 /* GameVC+GameActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameVC+GameActions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +83,7 @@
 			children = (
 				FB27B6542AD0D17800F90C2B /* BlocksApp.swift */,
 				FB27B6582AD0D17900F90C2B /* Assets.xcassets */,
+				FBF25BC52AE08C9E0075F8F8 /* Model */,
 				FBF44B312AD582070081BCA8 /* View */,
 				FBF44B332AD5825D0081BCA8 /* AR */,
 				FBF44B322AD582250081BCA8 /* Database */,
@@ -93,10 +104,46 @@
 		FBF25BBB2AE04BAC0075F8F8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				FBB093A82ADB31CD006F7B9E /* HUDView.swift */,
 				FB4E82192AD3579C002EAF42 /* GameView.swift */,
+				FBF25BCD2AE094E50075F8F8 /* HUD */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		FBF25BC52AE08C9E0075F8F8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBF25BC62AE08CA70075F8F8 /* BlockModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBF25BCD2AE094E50075F8F8 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				FBB093A82ADB31CD006F7B9E /* HUDView.swift */,
+				FBF25BCE2AE094F20075F8F8 /* Components */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		FBF25BCE2AE094F20075F8F8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FBF25BCB2AE094B10075F8F8 /* ColorSelector.swift */,
+				FBF25BCF2AE095180075F8F8 /* ColorSelectionButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FBF25BD32AE0A37A0075F8F8 /* GameViewController */ = {
+			isa = PBXGroup;
+			children = (
+				FBA6AF372AD4E4830052E517 /* GameViewController.swift */,
+				FBF25BD12AE0A3630075F8F8 /* GameVC+GameActions.swift */,
+				FBD6F1F62ADD968900F189EF /* GameVC+ARSCNOps.swift */,
+			);
+			path = GameViewController;
 			sourceTree = "<group>";
 		};
 		FBF44B312AD582070081BCA8 /* View */ = {
@@ -121,10 +168,10 @@
 		FBF44B332AD5825D0081BCA8 /* AR */ = {
 			isa = PBXGroup;
 			children = (
-				FBA6AF372AD4E4830052E517 /* GameViewController.swift */,
-				FBD6F1F62ADD968900F189EF /* GameVC+ARSCNOps.swift */,
+				FBF25BD32AE0A37A0075F8F8 /* GameViewController */,
 				FB4E82172AD356CA002EAF42 /* ARBlocksScene.swift */,
 				FBF25BC12AE0635C0075F8F8 /* BlockCreationOptions.swift */,
+				FBF25BC32AE08C840075F8F8 /* ConstructionData.swift */,
 			);
 			path = AR;
 			sourceTree = "<group>";
@@ -201,7 +248,10 @@
 			files = (
 				FBF25BBD2AE04BE40075F8F8 /* UIPublisher.swift in Sources */,
 				FBD6F1F72ADD968900F189EF /* GameVC+ARSCNOps.swift in Sources */,
+				FBF25BCC2AE094B10075F8F8 /* ColorSelector.swift in Sources */,
+				FBF25BC42AE08C840075F8F8 /* ConstructionData.swift in Sources */,
 				FBB093A92ADB31CD006F7B9E /* HUDView.swift in Sources */,
+				FBF25BD22AE0A3630075F8F8 /* GameVC+GameActions.swift in Sources */,
 				FBA6AF382AD4E4830052E517 /* GameViewController.swift in Sources */,
 				FB27B65E2AD0D17900F90C2B /* Persistence.swift in Sources */,
 				FBF25BC22AE0635C0075F8F8 /* BlockCreationOptions.swift in Sources */,
@@ -211,6 +261,8 @@
 				FB4E82182AD356CA002EAF42 /* ARBlocksScene.swift in Sources */,
 				FB27B6552AD0D17800F90C2B /* BlocksApp.swift in Sources */,
 				FBF25BBA2AE048D20075F8F8 /* AppStartView.swift in Sources */,
+				FBF25BD02AE095180075F8F8 /* ColorSelectionButton.swift in Sources */,
+				FBF25BC72AE08CA70075F8F8 /* BlockModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
