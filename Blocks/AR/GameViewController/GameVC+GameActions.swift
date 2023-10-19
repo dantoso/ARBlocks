@@ -23,7 +23,12 @@ extension GameViewController {
 		for result in results {
 			switch result.node.name {
 			case "myPlane":
-				let position = result.worldCoordinates
+				let normal = result.worldNormal
+				var position = result.worldCoordinates
+				position.y += 0.04 * normal.y
+				position.x += 0.04 * normal.x
+				position.z += 0.04 * normal.z
+
 				sceneView.createBox(at: position, options: options)
 				return
 

@@ -4,6 +4,8 @@ import ARKit
 final class GameViewController: UIViewController {
 	lazy var sceneView = ARBlocksScene()
 	var anchors: Set<ARAnchor> = []
+	var cameraTransform: simd_float4x4 = .init()
+	var plane: SCNPlane?
 
 	let uiPublisher: UIPublisher
 
@@ -16,6 +18,7 @@ final class GameViewController: UIViewController {
 		super.viewDidLoad()
 		
 		sceneView.delegate = self
+		sceneView.session.delegate = self
 		sceneView.autoenablesDefaultLighting = false
 		sceneView.scene = SCNScene()
 

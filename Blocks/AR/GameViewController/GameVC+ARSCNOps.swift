@@ -1,14 +1,14 @@
 import ARKit
 import SceneKit
 
-extension GameViewController: ARSCNViewDelegate {
+extension GameViewController: ARSCNViewDelegate, ARSessionDelegate {
 	func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
 		guard let planeAnchor = anchor as? ARPlaneAnchor else { return nil }
 		let node = SCNNode()
 
-		let plane = SCNPlane(width: CGFloat(planeAnchor.planeExtent.width), height: CGFloat(planeAnchor.planeExtent.height))
-		plane.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent (0.5)
-
+		plane = SCNPlane(width: CGFloat(planeAnchor.planeExtent.width), height: CGFloat(planeAnchor.planeExtent.height))
+		plane?.firstMaterial?.diffuse.contents = UIColor.white.withAlphaComponent (0.5)
+		guard let plane else { return nil }
 		let planeNode = SCNNode(geometry: plane)
 		planeNode.position = SCNVector3(x: planeAnchor.center.x, y: 0, z: planeAnchor.center.z)
 		planeNode.transform = SCNMatrix4MakeRotation(-Float.pi / 2, 1, 0, 0)
@@ -35,6 +35,10 @@ extension GameViewController: ARSCNViewDelegate {
 		plane.height = CGFloat(planeAnchor.planeExtent.height)
 
 		updateMaterialFor(geometry: plane)
+	}
+
+	func session(_ session: ARSession, didUpdate frame: ARFrame) {
+		cameraTransform = frame.camera.transform
 	}
 
 	func updateMaterialFor(geometry: SCNPlane) {
