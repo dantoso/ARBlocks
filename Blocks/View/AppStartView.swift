@@ -9,8 +9,13 @@ struct AppStartView: View {
 				GameView(publisher: publisher)
 					.ignoresSafeArea()
 
-				HUDView(selection: $publisher.color)
-					.frame(height: geometry.size.height*0.2)
+				HUDView(publisher: publisher)
+					.frame(height: geometry.size.height*0.25)
+					.mask {
+						Rectangle()
+							.ignoresSafeArea()
+							.frame(height: geometry.size.height*0.25)
+					}
 			}
 			.ignoresSafeArea()
 		}
