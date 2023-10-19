@@ -13,13 +13,8 @@ struct SaveButton: View {
 				.foregroundStyle(.blue)
 				.padding()
 				.background {
-					if publisher.isBuildSelected {
-						RoundedRectangle(cornerRadius: 15)
-							.foregroundStyle(.foreground)
-					} else {
-						RoundedRectangle(cornerRadius: 15)
-							.foregroundStyle(.background)
-					}
+					RoundedRectangle(cornerRadius: 15)
+						.foregroundStyle(.background)
 				}
 		})
 		.disabled(!publisher.hasSelection)

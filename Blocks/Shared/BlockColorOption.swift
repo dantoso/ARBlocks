@@ -19,4 +19,9 @@ enum BlockColorOption: String, CaseIterable {
 			return .purple
 		}
 	}
+
+	init(color: UIColor) {
+		let option = BlockColorOption.allCases.first { $0.uiColor == color }
+		self = option ?? .red
+	}
 }

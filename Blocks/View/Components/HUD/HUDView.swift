@@ -14,13 +14,13 @@ struct HUDView: View {
 
 					ScrollView(.horizontal, showsIndicators: false) {
 						HStack {
+							DeleteButton()
 							SelectButton()
 							BuildButton()
-							DeleteButton()
+							SaveButton()
 						}
 						.padding(.horizontal)
 					}
-					.padding(.bottom)
 				}
 			}
 		}

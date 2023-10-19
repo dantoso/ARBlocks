@@ -77,7 +77,7 @@ extension GameViewController {
 				let position = result.worldCoordinates
 				let data = construction.loadConstructionData(from: position)
 				data.forEach { model in
-					sceneView.createBox(at: model.position, options: .init(color: model.color))
+					sceneView.createBox(at: model.position, options: .init(color: model.color.uiColor))
 				}
 				return
 
@@ -91,7 +91,7 @@ extension GameViewController {
 
 				let data = construction.loadConstructionData(from: position)
 				data.forEach { model in
-					sceneView.createBox(at: model.position, options: .init(color: model.color))
+					sceneView.createBox(at: model.position, options: .init(color: model.color.uiColor))
 				}
 				return
 

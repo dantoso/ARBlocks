@@ -1,6 +1,7 @@
 import SceneKit
 
 final class ConstructionData {
+	var name: String = ""
 	private var construction: Set<BlockModel> = []
 	private var initalPosition: SCNVector3 = .init(x: 0, y: 0, z: 0)
 
@@ -17,6 +18,7 @@ final class ConstructionData {
 			y: construction.initialY,
 			z: construction.initialZ
 		)
+		self.name = construction.name ?? ""
 	}
 
 	func didSelectBlock(model: BlockModel) {
@@ -30,7 +32,7 @@ final class ConstructionData {
 			model.position.z - initalPosition.z
 		)
 
-		let newBlock = BlockModel(position: relativePosition, color: model.color)
+		let newBlock = BlockModel(position: relativePosition, color: model.color.uiColor)
 
 		let result = construction.insert(newBlock)
 
@@ -48,7 +50,7 @@ final class ConstructionData {
 				block.position.z + position.z
 			)
 
-			return BlockModel(position: absolutePosition, color: block.color)
+			return BlockModel(position: absolutePosition, color: block.color.uiColor)
 		}
 
 		return data
@@ -58,8 +60,8 @@ final class ConstructionData {
 		return construction.count
 	}
 
-	func exportConstruction() -> (blocks: [BlockModel], initialPosition: SCNVector3) {
-		return (Array(construction), initalPosition)
+	func exportConstruction() -> (name: String, blocks: [BlockModel], initialPosition: SCNVector3) {
+		return (name, Array(construction), initalPosition)
 	}
 
 	func reset() {
