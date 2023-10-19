@@ -61,11 +61,11 @@ extension GameViewController {
 
 			let model = BlockModel(position: result.node.position, color: color)
 
-			construction.didSelectBlock(model: model)
+			uiPublisher.construction.didSelectBlock(model: model)
 
 			sceneView.didTapNode(node: result.node)
 
-			uiPublisher.hasSelection = construction.blockCount() > 0
+			uiPublisher.hasSelection = uiPublisher.construction.blockCount() > 0
 			return
 		}
 	}
@@ -75,7 +75,7 @@ extension GameViewController {
 			switch result.node.name {
 			case "myPlane":
 				let position = result.worldCoordinates
-				let data = construction.loadConstructionData(from: position)
+				let data = uiPublisher.construction.loadConstructionData(from: position)
 				data.forEach { model in
 					sceneView.createBox(at: model.position, options: .init(color: model.color.uiColor))
 				}
@@ -89,7 +89,7 @@ extension GameViewController {
 				position.x += 0.1 * normal.x
 				position.z += 0.1 * normal.z
 
-				let data = construction.loadConstructionData(from: position)
+				let data = uiPublisher.construction.loadConstructionData(from: position)
 				data.forEach { model in
 					sceneView.createBox(at: model.position, options: .init(color: model.color.uiColor))
 				}

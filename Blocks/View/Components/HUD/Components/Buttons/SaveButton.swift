@@ -5,7 +5,7 @@ struct SaveButton: View {
 
 	var body: some View {
 		Button(action: {
-			publisher.didTapSave()
+			publisher.showSaveModal = true
 		}, label: {
 			Image(systemName: "square.and.arrow.down")
 				.resizable()

@@ -1,9 +1,7 @@
 import SwiftUI
 
 struct AppStartView: View {
-	@State var isShowingList = false
 	@StateObject var publisher = UIPublisher()
-
 	let repository = ConstructionRepository()
 
 	var body: some View {
@@ -22,7 +20,7 @@ struct AppStartView: View {
 
 				VStack {
 					HStack {
-						ShowConstructionsButton(shoudlShow: $isShowingList)
+						ShowConstructionsButton(shoudlShow: $publisher.showList)
 							.padding(.top, 50)
 							.padding()
 						Spacer()
@@ -33,9 +31,13 @@ struct AppStartView: View {
 			.ignoresSafeArea()
 		}
 		.ignoresSafeArea()
-		.sheet(isPresented: $isShowingList) {
+		.sheet(isPresented: $publisher.showList) {
 			ConstructionList(repository: repository)
 				.environmentObject(publisher)
+		}
+		.sheet(isPresented: $publisher.showSaveModal) {
+			// TODO: Implement view
+			Text("save")
 		}
 	}
 }

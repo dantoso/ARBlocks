@@ -7,16 +7,13 @@ final class UIPublisher: ObservableObject {
 	@Published var isBuildSelected = false
 	@Published var hasSelection = false
 
+	@Published var showList = false
+	@Published var showSaveModal = false
+
 	@Published var color: UIColor? = .init(Color.red)
+
 	var action = GameAction.placeBlock(options: .init(color: UIColor(Color.red)))
-
-	func loadConstruction(data: ConstructionData) {
-		// TODO: Implement this
-	}
-
-	func didTapSave() {
-		// TODO: Implement this
-	}
+	lazy var construction = ConstructionData()
 
 	func didSelectColor(color: UIColor) {
 		self.color = color

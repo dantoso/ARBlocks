@@ -12,7 +12,8 @@ struct ConstructionList: View {
 				let data = constructions[index]
 
 				Button(data.name) {
-					publisher.loadConstruction(data: data)
+					publisher.construction = data
+					publisher.showList = false
 				}
 			}
 		}

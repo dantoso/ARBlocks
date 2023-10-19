@@ -3,7 +3,6 @@ import ARKit
 
 final class GameViewController: UIViewController {
 	lazy var sceneView = ARBlocksScene()
-	lazy var construction = ConstructionData()
 	var anchors: Set<ARAnchor> = []
 
 	let uiPublisher: UIPublisher
