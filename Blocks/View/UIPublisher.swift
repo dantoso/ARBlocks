@@ -19,6 +19,7 @@ final class UIPublisher: ObservableObject {
 		self.color = color
 		isDeleteBlockSelected = false
 		isSelectorSelected = false
+		isBuildSelected = false
 		action = .placeBlock(options: .init(color: color))
 	}
 

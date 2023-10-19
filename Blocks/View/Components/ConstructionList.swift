@@ -13,6 +13,7 @@ struct ConstructionList: View {
 
 				Button(data.name) {
 					publisher.construction = data
+					publisher.hasSelection = true
 					publisher.showList = false
 				}
 			}

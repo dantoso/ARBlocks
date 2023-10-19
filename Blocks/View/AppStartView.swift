@@ -36,8 +36,7 @@ struct AppStartView: View {
 				.environmentObject(publisher)
 		}
 		.sheet(isPresented: $publisher.showSaveModal) {
-			// TODO: Implement view
-			Text("save")
+			SaveView(publisher: publisher, repository: repository)
 		}
 	}
 }

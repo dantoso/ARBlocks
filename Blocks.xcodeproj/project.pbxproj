@@ -15,6 +15,7 @@
 		FB0F6D2C2AE16CC500B2D0AF /* CDBlock+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6D282AE16CC500B2D0AF /* CDBlock+CoreDataProperties.swift */; };
 		FB0F6D2D2AE16CC500B2D0AF /* CDConstruction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6D292AE16CC500B2D0AF /* CDConstruction+CoreDataClass.swift */; };
 		FB0F6D2E2AE16CC500B2D0AF /* CDConstruction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6D2A2AE16CC500B2D0AF /* CDConstruction+CoreDataProperties.swift */; };
+		FB1C101C2AE1A49000D24B3F /* SaveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB1C101B2AE1A49000D24B3F /* SaveView.swift */; };
 		FB27B6552AD0D17800F90C2B /* BlocksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27B6542AD0D17800F90C2B /* BlocksApp.swift */; };
 		FB27B6592AD0D17900F90C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB27B6582AD0D17900F90C2B /* Assets.xcassets */; };
 		FB27B65C2AD0D17900F90C2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB27B65B2AD0D17900F90C2B /* Preview Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		FB0F6D282AE16CC500B2D0AF /* CDBlock+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDBlock+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FB0F6D292AE16CC500B2D0AF /* CDConstruction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDConstruction+CoreDataClass.swift"; sourceTree = "<group>"; };
 		FB0F6D2A2AE16CC500B2D0AF /* CDConstruction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CDConstruction+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FB1C101B2AE1A49000D24B3F /* SaveView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveView.swift; sourceTree = "<group>"; };
 		FB27B6512AD0D17800F90C2B /* Blocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB27B6542AD0D17800F90C2B /* BlocksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksApp.swift; sourceTree = "<group>"; };
 		FB27B6582AD0D17900F90C2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		FBF25BBB2AE04BAC0075F8F8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FB1C101B2AE1A49000D24B3F /* SaveView.swift */,
 				FB7EF4872AE187EA00EAAD4D /* ConstructionList.swift */,
 				FB7EF4852AE186E700EAAD4D /* ShowConstructionsButton.swift */,
 				FB4E82192AD3579C002EAF42 /* GameView.swift */,
@@ -323,6 +326,7 @@
 				FB27B65E2AD0D17900F90C2B /* ConstructionRepository.swift in Sources */,
 				FB0F6D2D2AE16CC500B2D0AF /* CDConstruction+CoreDataClass.swift in Sources */,
 				FBF25BC22AE0635C0075F8F8 /* BlockCreationOptions.swift in Sources */,
+				FB1C101C2AE1A49000D24B3F /* SaveView.swift in Sources */,
 				FBB093AB2ADB32BD006F7B9E /* BlockColorOption.swift in Sources */,
 				FB0F6D1E2AE15B6400B2D0AF /* SelectButton.swift in Sources */,
 				FB27B6612AD0D17900F90C2B /* Blocks.xcdatamodeld in Sources */,
