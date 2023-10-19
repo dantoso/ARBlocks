@@ -5,7 +5,6 @@ extension GameViewController {
 		let results = sceneView.hitTest(location, options: [.searchMode: 1])
 
 		switch uiPublisher.action {
-
 		case .placeBlock(options: let options):
 			placeBlock(results: results, options: options)
 
@@ -14,6 +13,9 @@ extension GameViewController {
 
 		case .selectBlock:
 			selectBlock(results: results)
+
+		case .build:
+			build(results: results)
 		}
 	}
 
@@ -58,10 +60,40 @@ extension GameViewController {
 			else { continue }
 
 			let model = BlockModel(position: result.node.position, color: color)
-			construction.addNewBlock(model: model)
-
-			// TODO: Change block color to reflect selection
+			construction.didSelectBlock(model: model)
+			sceneView.didTapNode(node: result.node)
 			return
+		}
+	}
+
+	func build(results: [SCNHitTestResult]) {
+		for result in results {
+			switch result.node.name {
+			case "myPlane":
+				let position = result.worldCoordinates
+				let data = construction.loadConstructionData(from: position)
+				data.forEach { model in
+					sceneView.createBox(at: model.position, options: .init(color: model.color))
+				}
+				return
+
+			case "myBlock":
+				let normal = result.worldNormal
+
+				var position = result.node.position
+				position.y += 0.1 * normal.y
+				position.x += 0.1 * normal.x
+				position.z += 0.1 * normal.z
+
+				let data = construction.loadConstructionData(from: position)
+				data.forEach { model in
+					sceneView.createBox(at: model.position, options: .init(color: model.color))
+				}
+				return
+
+			default:
+				continue
+			}
 		}
 	}
 }

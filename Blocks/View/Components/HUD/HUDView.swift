@@ -15,6 +15,7 @@ struct HUDView: View {
 					ScrollView(.horizontal, showsIndicators: false) {
 						HStack {
 							SelectButton()
+							BuildButton()
 							DeleteButton()
 						}
 						.padding(.horizontal)

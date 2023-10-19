@@ -18,6 +18,10 @@ final class ARBlocksScene: ARSCNView {
 		self.scene.rootNode.addChildNode(node)
 	}
 
+	func didTapNode(node: SCNNode) {
+		node.opacity = node.opacity == 1 ? 0.8 : 1
+	}
+
 	func removeBox(node: SCNNode) {
 		node.removeFromParentNode()
 	}

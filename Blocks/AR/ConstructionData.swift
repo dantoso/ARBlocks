@@ -1,10 +1,10 @@
 import SceneKit
 
 final class ConstructionData {
-	private var construction: [BlockModel] = []
+	private var construction: Set<BlockModel> = []
 	private var initalPosition: SCNVector3 = .init(x: 0, y: 0, z: 0)
 
-	func addNewBlock(model: BlockModel) {
+	func didSelectBlock(model: BlockModel) {
 		if construction.isEmpty {
 			initalPosition = model.position
 		}
@@ -16,7 +16,15 @@ final class ConstructionData {
 		)
 
 		let newBlock = BlockModel(position: relativePosition, color: model.color)
-		construction.append(newBlock)
+
+		let result = construction.insert(newBlock)
+
+		if !result.inserted {
+			let oldMember = result.memberAfterInsert
+			construction.remove(oldMember)
+		} else {
+			print("adding")
+		}
 	}
 
 	func loadConstructionData(from position: SCNVector3) -> [BlockModel] {

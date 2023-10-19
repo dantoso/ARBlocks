@@ -4,6 +4,7 @@ import SwiftUI
 final class UIPublisher: ObservableObject {
 	@Published var isDeleteBlockSelected = false
 	@Published var isSelectorSelected = false
+	@Published var isBuildSelected = false
 	@Published var color: UIColor? = .init(Color.red)
 	var action = GameAction.placeBlock(options: .init(color: UIColor(Color.red)))
 
@@ -17,14 +18,24 @@ final class UIPublisher: ObservableObject {
 	func didTapDelete() {
 		isDeleteBlockSelected = true
 		isSelectorSelected = false
+		isBuildSelected = false
 		color = nil
 		action = .deleteBlock
 	}
 
 	func didTapSelect() {
 		isSelectorSelected = true
-		color = nil
 		isDeleteBlockSelected = false
+		isBuildSelected = false
+		color = nil
 		action = .selectBlock
+	}
+
+	func didTapBuild() {
+		isBuildSelected = true
+		isSelectorSelected = false
+		isDeleteBlockSelected = false
+		color = nil
+		action = .build
 	}
 }

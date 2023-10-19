@@ -4,4 +4,5 @@ enum GameAction {
 	case placeBlock(options: BlockCreationOptions)
 	case deleteBlock
 	case selectBlock
+	case build
 }

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		FB0F6D1E2AE15B6400B2D0AF /* SelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6D1D2AE15B6400B2D0AF /* SelectButton.swift */; };
 		FB0F6D222AE15BE100B2D0AF /* GameAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6D212AE15BE100B2D0AF /* GameAction.swift */; };
+		FB0F6D242AE15DFA00B2D0AF /* SCNVector3+Equatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6D232AE15DFA00B2D0AF /* SCNVector3+Equatable.swift */; };
+		FB0F6D262AE1641300B2D0AF /* BuildButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB0F6D252AE1641300B2D0AF /* BuildButton.swift */; };
 		FB27B6552AD0D17800F90C2B /* BlocksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27B6542AD0D17800F90C2B /* BlocksApp.swift */; };
 		FB27B6592AD0D17900F90C2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB27B6582AD0D17900F90C2B /* Assets.xcassets */; };
 		FB27B65C2AD0D17900F90C2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB27B65B2AD0D17900F90C2B /* Preview Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* Begin PBXFileReference section */
 		FB0F6D1D2AE15B6400B2D0AF /* SelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectButton.swift; sourceTree = "<group>"; };
 		FB0F6D212AE15BE100B2D0AF /* GameAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameAction.swift; sourceTree = "<group>"; };
+		FB0F6D232AE15DFA00B2D0AF /* SCNVector3+Equatable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNVector3+Equatable.swift"; sourceTree = "<group>"; };
+		FB0F6D252AE1641300B2D0AF /* BuildButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuildButton.swift; sourceTree = "<group>"; };
 		FB27B6512AD0D17800F90C2B /* Blocks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB27B6542AD0D17800F90C2B /* BlocksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlocksApp.swift; sourceTree = "<group>"; };
 		FB27B6582AD0D17900F90C2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +77,7 @@
 			children = (
 				FB0F6D212AE15BE100B2D0AF /* GameAction.swift */,
 				FBB093AA2ADB32BD006F7B9E /* BlockTextureOption.swift */,
+				FB0F6D232AE15DFA00B2D0AF /* SCNVector3+Equatable.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				FBF25BCF2AE095180075F8F8 /* ColorSelectionButton.swift */,
 				FBF25BD62AE0AE900075F8F8 /* DeleteButton.swift */,
 				FB0F6D1D2AE15B6400B2D0AF /* SelectButton.swift */,
+				FB0F6D252AE1641300B2D0AF /* BuildButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -263,6 +269,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB0F6D262AE1641300B2D0AF /* BuildButton.swift in Sources */,
+				FB0F6D242AE15DFA00B2D0AF /* SCNVector3+Equatable.swift in Sources */,
 				FBF25BBD2AE04BE40075F8F8 /* UIPublisher.swift in Sources */,
 				FBD6F1F72ADD968900F189EF /* GameVC+ARSCNOps.swift in Sources */,
 				FBF25BCC2AE094B10075F8F8 /* ColorSelector.swift in Sources */,
