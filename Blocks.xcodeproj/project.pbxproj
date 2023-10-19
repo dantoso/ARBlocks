@@ -23,6 +23,8 @@
 		FB4E82182AD356CA002EAF42 /* ARBlocksScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E82172AD356CA002EAF42 /* ARBlocksScene.swift */; };
 		FB4E821A2AD3579C002EAF42 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB4E82192AD3579C002EAF42 /* GameView.swift */; };
 		FB7EF4822AE173AA00EAAD4D /* SaveButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7EF4812AE173AA00EAAD4D /* SaveButton.swift */; };
+		FB7EF4862AE186E700EAAD4D /* ShowConstructionsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7EF4852AE186E700EAAD4D /* ShowConstructionsButton.swift */; };
+		FB7EF4882AE187EA00EAAD4D /* ConstructionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB7EF4872AE187EA00EAAD4D /* ConstructionList.swift */; };
 		FBA6AF382AD4E4830052E517 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA6AF372AD4E4830052E517 /* GameViewController.swift */; };
 		FBB093A92ADB31CD006F7B9E /* HUDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB093A82ADB31CD006F7B9E /* HUDView.swift */; };
 		FBB093AB2ADB32BD006F7B9E /* BlockColorOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB093AA2ADB32BD006F7B9E /* BlockColorOption.swift */; };
@@ -56,6 +58,8 @@
 		FB4E82172AD356CA002EAF42 /* ARBlocksScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARBlocksScene.swift; sourceTree = "<group>"; };
 		FB4E82192AD3579C002EAF42 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
 		FB7EF4812AE173AA00EAAD4D /* SaveButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveButton.swift; sourceTree = "<group>"; };
+		FB7EF4852AE186E700EAAD4D /* ShowConstructionsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowConstructionsButton.swift; sourceTree = "<group>"; };
+		FB7EF4872AE187EA00EAAD4D /* ConstructionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstructionList.swift; sourceTree = "<group>"; };
 		FBA6AF372AD4E4830052E517 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		FBB093A82ADB31CD006F7B9E /* HUDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HUDView.swift; sourceTree = "<group>"; };
 		FBB093AA2ADB32BD006F7B9E /* BlockColorOption.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockColorOption.swift; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 		FBF25BBB2AE04BAC0075F8F8 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				FB7EF4872AE187EA00EAAD4D /* ConstructionList.swift */,
+				FB7EF4852AE186E700EAAD4D /* ShowConstructionsButton.swift */,
 				FB4E82192AD3579C002EAF42 /* GameView.swift */,
 				FBF25BCD2AE094E50075F8F8 /* HUD */,
 			);
@@ -309,8 +315,10 @@
 				FBF25BC42AE08C840075F8F8 /* ConstructionData.swift in Sources */,
 				FBB093A92ADB31CD006F7B9E /* HUDView.swift in Sources */,
 				FB0F6D2C2AE16CC500B2D0AF /* CDBlock+CoreDataProperties.swift in Sources */,
+				FB7EF4882AE187EA00EAAD4D /* ConstructionList.swift in Sources */,
 				FBF25BD22AE0A3630075F8F8 /* GameVC+GameActions.swift in Sources */,
 				FBA6AF382AD4E4830052E517 /* GameViewController.swift in Sources */,
+				FB7EF4862AE186E700EAAD4D /* ShowConstructionsButton.swift in Sources */,
 				FB0F6D222AE15BE100B2D0AF /* GameAction.swift in Sources */,
 				FB27B65E2AD0D17900F90C2B /* ConstructionRepository.swift in Sources */,
 				FB0F6D2D2AE16CC500B2D0AF /* CDConstruction+CoreDataClass.swift in Sources */,

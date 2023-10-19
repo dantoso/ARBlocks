@@ -21,6 +21,7 @@ struct HUDView: View {
 						}
 						.padding(.horizontal)
 					}
+					.padding(.bottom, 30)
 				}
 			}
 		}

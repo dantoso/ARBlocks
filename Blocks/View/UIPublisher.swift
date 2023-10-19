@@ -10,6 +10,10 @@ final class UIPublisher: ObservableObject {
 	@Published var color: UIColor? = .init(Color.red)
 	var action = GameAction.placeBlock(options: .init(color: UIColor(Color.red)))
 
+	func loadConstruction(data: ConstructionData) {
+		// TODO: Implement this
+	}
+
 	func didTapSave() {
 		// TODO: Implement this
 	}

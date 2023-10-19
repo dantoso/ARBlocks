@@ -10,7 +10,7 @@ struct BuildButton: View {
 			Image(systemName: "hammer.fill")
 				.resizable()
 				.frame(width: 50, height: 50)
-				.foregroundStyle(.blue)
+				.foregroundStyle(publisher.hasSelection ? .blue : .gray)
 				.padding()
 				.background {
 					if publisher.isBuildSelected {
@@ -19,6 +19,7 @@ struct BuildButton: View {
 					} else {
 						RoundedRectangle(cornerRadius: 15)
 							.foregroundStyle(.background)
+							.opacity(publisher.hasSelection ? 1 : 0.5)
 					}
 				}
 		})

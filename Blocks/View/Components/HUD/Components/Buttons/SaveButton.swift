@@ -10,11 +10,12 @@ struct SaveButton: View {
 			Image(systemName: "square.and.arrow.down")
 				.resizable()
 				.frame(width: 50, height: 50)
-				.foregroundStyle(.blue)
+				.foregroundStyle(publisher.hasSelection ? .blue : .gray)
 				.padding()
 				.background {
 					RoundedRectangle(cornerRadius: 15)
 						.foregroundStyle(.background)
+						.opacity(publisher.hasSelection ? 1 : 0.5)
 				}
 		})
 		.disabled(!publisher.hasSelection)
