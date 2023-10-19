@@ -37,8 +37,6 @@ final class ConstructionData {
 		if !result.inserted {
 			let oldMember = result.memberAfterInsert
 			construction.remove(oldMember)
-		} else {
-			print("adding")
 		}
 	}
 
@@ -54,6 +52,10 @@ final class ConstructionData {
 		}
 
 		return data
+	}
+
+	func blockCount() -> Int {
+		return construction.count
 	}
 
 	func exportConstruction() -> (blocks: [BlockModel], initialPosition: SCNVector3) {

@@ -22,5 +22,6 @@ struct BuildButton: View {
 					}
 				}
 		})
+		.disabled(!publisher.hasSelection)
 	}
 }

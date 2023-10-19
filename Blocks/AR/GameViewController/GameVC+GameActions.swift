@@ -60,8 +60,12 @@ extension GameViewController {
 			else { continue }
 
 			let model = BlockModel(position: result.node.position, color: color)
+
 			construction.didSelectBlock(model: model)
+
 			sceneView.didTapNode(node: result.node)
+
+			uiPublisher.hasSelection = construction.blockCount() > 0
 			return
 		}
 	}

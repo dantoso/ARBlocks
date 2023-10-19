@@ -5,8 +5,14 @@ final class UIPublisher: ObservableObject {
 	@Published var isDeleteBlockSelected = false
 	@Published var isSelectorSelected = false
 	@Published var isBuildSelected = false
+	@Published var hasSelection = false
+
 	@Published var color: UIColor? = .init(Color.red)
 	var action = GameAction.placeBlock(options: .init(color: UIColor(Color.red)))
+
+	func didTapSave() {
+
+	}
 
 	func didSelectColor(color: UIColor) {
 		self.color = color
