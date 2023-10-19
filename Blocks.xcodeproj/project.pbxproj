@@ -26,6 +26,7 @@
 		FBF25BCC2AE094B10075F8F8 /* ColorSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BCB2AE094B10075F8F8 /* ColorSelector.swift */; };
 		FBF25BD02AE095180075F8F8 /* ColorSelectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BCF2AE095180075F8F8 /* ColorSelectionButton.swift */; };
 		FBF25BD22AE0A3630075F8F8 /* GameVC+GameActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BD12AE0A3630075F8F8 /* GameVC+GameActions.swift */; };
+		FBF25BD72AE0AE900075F8F8 /* DeleteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF25BD62AE0AE900075F8F8 /* DeleteButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		FBF25BCB2AE094B10075F8F8 /* ColorSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelector.swift; sourceTree = "<group>"; };
 		FBF25BCF2AE095180075F8F8 /* ColorSelectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorSelectionButton.swift; sourceTree = "<group>"; };
 		FBF25BD12AE0A3630075F8F8 /* GameVC+GameActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GameVC+GameActions.swift"; sourceTree = "<group>"; };
+		FBF25BD62AE0AE900075F8F8 /* DeleteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,6 +134,7 @@
 			children = (
 				FBF25BCB2AE094B10075F8F8 /* ColorSelector.swift */,
 				FBF25BCF2AE095180075F8F8 /* ColorSelectionButton.swift */,
+				FBF25BD62AE0AE900075F8F8 /* DeleteButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 				FB4E821A2AD3579C002EAF42 /* GameView.swift in Sources */,
 				FB4E82182AD356CA002EAF42 /* ARBlocksScene.swift in Sources */,
 				FB27B6552AD0D17800F90C2B /* BlocksApp.swift in Sources */,
+				FBF25BD72AE0AE900075F8F8 /* DeleteButton.swift in Sources */,
 				FBF25BBA2AE048D20075F8F8 /* AppStartView.swift in Sources */,
 				FBF25BD02AE095180075F8F8 /* ColorSelectionButton.swift in Sources */,
 				FBF25BC72AE08CA70075F8F8 /* BlockModel.swift in Sources */,

@@ -34,7 +34,7 @@ final class ConstructionData {
 	}
 
 	func saveCurrentConstruction() {
-
+		// TODO: implement this later
 	}
 
 	func reset() {

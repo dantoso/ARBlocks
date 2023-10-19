@@ -10,11 +10,14 @@ struct HUDView: View {
 
 			ScrollView(.vertical, showsIndicators: false) {
 				VStack(spacing: 10) {
-					ColorSelector(selection: $publisher.color)
-					
+					ColorSelector()
+
+					DeleteButton()
+
 				}
 			}
 		}
+		.environmentObject(publisher)
 	}
 }
 

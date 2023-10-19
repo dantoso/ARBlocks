@@ -1,19 +1,19 @@
 import SwiftUI
 
-struct ColorSelectionButton: View {
-	let color: Color
+struct DeleteButton: View {
 	@EnvironmentObject var publisher: UIPublisher
 
 	var body: some View {
 		Button(action: {
-			publisher.didSelectColor(color: UIColor(color))
+			publisher.didTapDelete()
 		}, label: {
-			Rectangle()
-				.foregroundStyle(color)
+			Image(systemName: "trash")
+				.resizable()
 				.frame(width: 50, height: 50)
+				.foregroundStyle(.red)
 				.padding()
 				.background {
-					if publisher.color == UIColor(color) {
+					if publisher.isDeleteBlockSelected {
 						RoundedRectangle(cornerRadius: 15)
 							.foregroundStyle(.foreground)
 					} else {
