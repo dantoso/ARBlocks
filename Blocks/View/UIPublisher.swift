@@ -1,13 +1,13 @@
 import Foundation
 import SwiftUI
 
-final class UIPublisher: ObservableObject {
-	@Published var color: UIColor = UIColor(Color.red)
-	
-	func generateOptions() -> BlockCreationOptions {
-		var options = BlockCreationOptions()
-		options.color = color
+enum GameAction {
+	case placeBlock(options: BlockCreationOptions)
+	case deleteBlock
+	case selectBlock
+}
 
-		return options
-	}
+final class UIPublisher: ObservableObject {
+	@Published var action = GameAction.placeBlock(options: .init(color: UIColor(Color.red)))
+	@Published var color: UIColor? = .init(Color.red)
 }

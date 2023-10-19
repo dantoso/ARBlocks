@@ -3,6 +3,7 @@ import ARKit
 
 final class GameViewController: UIViewController {
 	lazy var sceneView = ARBlocksScene()
+	lazy var construction = ConstructionData()
 	var anchors: Set<ARAnchor> = []
 
 	let uiPublisher: UIPublisher
@@ -37,38 +38,7 @@ final class GameViewController: UIViewController {
 
 		let location = touch.location(in: sceneView)
 
-		hitTest(location: location)
-	}
-
-	func hitTest(location: CGPoint) {
-		let results = sceneView.hitTest(location, options: [.searchMode: 1])
-
-		for result in results {
-			switch result.node.name {
-			case "myPlane":
-				let position = result.worldCoordinates
-				let options = uiPublisher.generateOptions()
-
-				sceneView.createBox(at: position, options: options)
-				return
-
-			case "myBlock":
-				let normal = result.worldNormal
-
-				var position = result.node.position
-				position.y += 0.1 * normal.y
-				position.x += 0.1 * normal.x
-				position.z += 0.1 * normal.z
-
-				let options = uiPublisher.generateOptions()
-
-				sceneView.createBox(at: position, options: options)
-				return
-
-			default:
-				continue
-			}
-		}
+		executeActionAt(location: location)
 	}
 
 	func setupConstraints() {

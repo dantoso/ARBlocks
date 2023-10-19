@@ -17,7 +17,11 @@ final class ARBlocksScene: ARSCNView {
 
 		self.scene.rootNode.addChildNode(node)
 	}
-	
+
+	func removeBox(node: SCNNode) {
+		node.removeFromParentNode()
+	}
+
 	@MainActor required dynamic init?(coder decoder: NSCoder) {
 		fatalError("init(coder:) has not been implemented")
 	}
