@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// The construction saving modal
 struct SaveView: View {
 	@State var name: String = ""
 

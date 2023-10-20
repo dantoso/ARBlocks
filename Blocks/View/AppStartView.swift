@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// The app's full interface
 struct AppStartView: View {
 	@StateObject var publisher = UIPublisher()
 	let repository = ConstructionRepository()

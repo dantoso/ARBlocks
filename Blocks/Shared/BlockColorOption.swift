@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Colors available for block building
 enum BlockColorOption: String, CaseIterable {
 	case red, yellow, green, blue, purple
 

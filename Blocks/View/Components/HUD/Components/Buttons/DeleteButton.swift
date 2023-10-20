@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Button for selecting the Delete tool
 struct DeleteButton: View {
 	@EnvironmentObject var publisher: UIPublisher
 

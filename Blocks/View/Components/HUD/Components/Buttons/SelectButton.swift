@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Button for selecting the Select tool
 struct SelectButton: View {
 	@EnvironmentObject var publisher: UIPublisher
 

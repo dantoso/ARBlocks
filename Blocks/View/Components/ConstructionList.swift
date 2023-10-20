@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Modal that lists all the constructions in the database
 struct ConstructionList: View {
 	let repository: ConstructionRepository
 	@State var constructions: [ConstructionData] = []

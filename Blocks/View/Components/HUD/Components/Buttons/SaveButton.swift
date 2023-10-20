@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Button for starting the save procces of a selected construction in the database
 struct SaveButton: View {
 	@EnvironmentObject var publisher: UIPublisher
 

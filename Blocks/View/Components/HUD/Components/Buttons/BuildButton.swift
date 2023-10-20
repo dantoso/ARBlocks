@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Button for selecting the Build tool
 struct BuildButton: View {
 	@EnvironmentObject var publisher: UIPublisher
 

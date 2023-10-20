@@ -1,5 +1,6 @@
 import SceneKit
 
+/// This struct models a single block
 struct BlockModel: Hashable {
 	let position: SCNVector3
 	let color: BlockColorOption

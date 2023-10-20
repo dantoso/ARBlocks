@@ -1,9 +1,11 @@
 import CoreData
 
+/// Struct responsible for talking directly to the database
 struct ConstructionRepository {
     let container: NSPersistentContainer
 	var context: NSManagedObjectContext { container.viewContext }
 
+	/// Loads the database container
     init(inMemory: Bool = false) {
         container = NSPersistentContainer(name: "Blocks")
         if inMemory {
@@ -18,6 +20,7 @@ struct ConstructionRepository {
         container.viewContext.automaticallyMergesChangesFromParent = true
     }
 
+	/// Gets all the constructions stored in the database
 	func getAllConstructions() -> [ConstructionData] {
 		let request = CDConstruction.fetchRequest()
 		guard let result = try? context.fetch(request) else { return [] }
@@ -29,6 +32,7 @@ struct ConstructionRepository {
 		return constructions
 	}
 
+	/// Saves a construction in the database
 	func saveConstruction(construction: ConstructionData) {
 		let data = construction.exportConstruction()
 

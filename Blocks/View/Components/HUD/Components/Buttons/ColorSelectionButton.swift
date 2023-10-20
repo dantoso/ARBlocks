@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Button for selecting the block color
 struct ColorSelectionButton: View {
 	let color: Color
 	@EnvironmentObject var publisher: UIPublisher

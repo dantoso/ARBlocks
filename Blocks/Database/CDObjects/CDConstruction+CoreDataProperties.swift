@@ -1,6 +1,7 @@
 import Foundation
 import CoreData
 
+/// Representation of a construction in the database
 extension CDConstruction {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CDConstruction> {

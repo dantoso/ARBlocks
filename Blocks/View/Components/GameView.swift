@@ -1,5 +1,6 @@
  import SwiftUI
 
+/// The game view, wrapping the Game View Controller (a UIKit object) for it to be shown in a SwiftUI interface
 struct GameView: UIViewControllerRepresentable {
 	@ObservedObject var publisher: UIPublisher
 

@@ -1,6 +1,9 @@
 import SceneKit
 
+/// This file declares the funcitons that run when a user touches the AR view
 extension GameViewController {
+
+	/// Consults the UIPublisher to know which game action is to be executed at a certain point on the screen
 	func executeActionAt(location: CGPoint) {
 		let results = sceneView.hitTest(location, options: [.searchMode: 1])
 
@@ -19,6 +22,7 @@ extension GameViewController {
 		}
 	}
 
+	/// Tries to find a plane or block where the user touched to place a block on, if found, places a block on top of it
 	func placeBlock(results: [SCNHitTestResult], options: BlockCreationOptions) {
 		for result in results {
 			switch result.node.name {
@@ -50,6 +54,7 @@ extension GameViewController {
 		}
 	}
 
+	/// Tries to find a block where the user touched to be removed from the scene
 	func deleteBlock(results: [SCNHitTestResult]) {
 		for result in results {
 			guard result.node.name == "myBlock" else { continue }
@@ -58,6 +63,7 @@ extension GameViewController {
 		}
 	}
 
+	/// Tries to find a block where the user touched for it to be selected and stored in a construction data object
 	func selectBlock(results: [SCNHitTestResult]) {
 		for result in results {
 			guard 
@@ -76,6 +82,7 @@ extension GameViewController {
 		}
 	}
 
+	/// Tries to find a plane or block where the user touched to place a construction on, if found, places a construction on top of it
 	func build(results: [SCNHitTestResult]) {
 		for result in results {
 			switch result.node.name {

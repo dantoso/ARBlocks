@@ -1,6 +1,7 @@
 import Foundation
 import CoreData
 
+/// Representation of a block in the database
 extension CDBlock {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CDBlock> {

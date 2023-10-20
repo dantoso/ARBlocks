@@ -1,7 +1,10 @@
 import UIKit
 import ARKit
 
+/// The game. This object handles all the AR Logic, in this file, only the setup is visible
 final class GameViewController: UIViewController {
+
+	/// The scene view, which shows the AR session
 	lazy var sceneView = ARBlocksScene()
 	var anchors: Set<ARAnchor> = []
 	var cameraTransform: simd_float4x4 = .init()
@@ -13,6 +16,7 @@ final class GameViewController: UIViewController {
 		super.init(nibName: nil, bundle: nil)
 	}
 
+	/// Runs every time this object's view (AKA sceneView)  is lodaded into memory
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		
@@ -25,12 +29,14 @@ final class GameViewController: UIViewController {
 		setupConstraints()
 	}
 
+	/// Runs every time sceneView is going to appear
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 
 		addARConfiguration()
 	}
 
+	/// Runs every time the user touches the AR scene
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
 		guard 
 			!anchors.isEmpty,
@@ -42,6 +48,7 @@ final class GameViewController: UIViewController {
 		executeActionAt(location: location)
 	}
 
+	/// Sets constraints for the AR view to occupy the correct screen space
 	func setupConstraints() {
 		sceneView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
 		sceneView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
@@ -49,6 +56,7 @@ final class GameViewController: UIViewController {
 		sceneView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
 	}
 
+	/// Adds necessary configuration to the AR scene for plane detection and world recognition
 	func addARConfiguration() {
 		let config = ARWorldTrackingConfiguration()
 		config.isLightEstimationEnabled = true

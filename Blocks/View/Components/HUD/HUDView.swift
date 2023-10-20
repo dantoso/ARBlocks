@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// The game HUD, with all of its components
 struct HUDView: View {
 	@ObservedObject var publisher: UIPublisher
 

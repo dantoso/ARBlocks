@@ -1,5 +1,6 @@
 import SwiftUI
 
+/// Button to present the construction list
 struct ShowConstructionsButton: View {
 	@Binding var shoudlShow: Bool
 
