@@ -18,7 +18,7 @@ Then, point your camera to the surface and soon the app will detect it and place
 
 ## How it works
 
-The HUD views and app presentation are all handled by SwiftUI, the AR logic and presentation is made using ARKit and SceneKit. Now, diving deeper into the architecture, I know it is not very scalable, but I made this app to be small and I made it as part of a challenge where I had very little time to develop it.
+The HUD views and app presentation are all handled by SwiftUI, the AR logic and presentation is made using ARKit and SceneKit. Now, diving deeper into the architecture, I know it is not very scalable at its current state, but I made this app to be small and had limited time to study, plan, develop and test it.
 
 I improvised 4 layers:
 
