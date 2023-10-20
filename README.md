@@ -27,11 +27,5 @@ I improvised 4 layers:
 - Database layer (self explanatory)
 - Model and Repository layer (the 2 together act as an interface for the publisher and view layers to access the database layer)
 
-That's about it, so let's dive deeper into the AR stuff.
-
-## AR Stuff
-
-
-
-
+That's about it, to get a more detail oriented perspective on how I've developed all this, I've used docC comments to document almost all of my code.
 
