@@ -24,6 +24,7 @@ extension GameViewController {
 			switch result.node.name {
 			case "myPlane":
 				let normal = result.worldNormal
+
 				var position = result.worldCoordinates
 				position.y += 0.04 * normal.y
 				position.x += 0.04 * normal.x
